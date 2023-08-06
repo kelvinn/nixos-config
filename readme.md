@@ -9,4 +9,4 @@ To run:
 nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#NoHome
 ```
 
-To enable home, search for `# Fix:` and update the `darwinModules` references to `xxx`. Re-run the above command and home will be included.
+To enable home, search for `# FIX:` and update the `darwinModules` references to `xxx`. Re-run the above command and home will be included.
