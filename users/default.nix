@@ -5,16 +5,7 @@ let
       username = lib.mkOption {
         type = lib.types.str;
       };
-      name = lib.mkOption {
-        type = lib.types.str;
-      };
-      email = lib.mkOption {
-        type = lib.types.str;
-      };
       home = lib.mkOption {
-        type = lib.types.str;
-      };
-      flakeDirectory = lib.mkOption {
         type = lib.types.str;
       };
     };

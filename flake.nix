@@ -9,10 +9,6 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-flake.url = "github:srid/nixos-flake";
-
-    # Rust toolchains and rust-analyzer nightly for Nix
-    fenix.url = "github:nix-community/fenix";
-    fenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, ... }: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
@@ -28,7 +24,7 @@
     flake = {
       darwinConfigurations."Adams-MBP" = self.nixos-flake.lib.mkMacosSystem "aarch64-darwin" {
         imports = [
-          self.xxx.default
+          self.darwinModules.default # FIX: Change darwinModules to xxx
         ];
       };
     };
