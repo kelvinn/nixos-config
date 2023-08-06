@@ -22,7 +22,7 @@
     ];
 
     flake = {
-      darwinConfigurations."Adams-MBP" = self.nixos-flake.lib.mkMacosSystem "aarch64-darwin" {
+      darwinConfigurations."NoHome" = self.nixos-flake.lib.mkMacosSystem "aarch64-darwin" {
         imports = [
           self.darwinModules.default # FIX: Change darwinModules to xxx
         ];
